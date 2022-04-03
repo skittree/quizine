@@ -1,0 +1,31 @@
+.footer-container {
+    width: 100vw;
+    height: 11vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #400654;
+    color: rgba(240, 240, 240, 0.42);
+    row-gap: 1vh;
+}
+
+.footer-container>img {
+    width: 2.7vw;
+    border-radius: 50%;
+}
+
+.break {
+    width: 201px;
+    height: 1px;
+    background-color: rgba(240, 240, 240, 0.42);
+}
+
+.footer-container>span {
+    width: 174px;
+    height: 15px;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+}
