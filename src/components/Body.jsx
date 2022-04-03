@@ -1,22 +1,21 @@
 import React from 'react';
-import AwesomeSlider from 'react-awesome-slider';
-import './Body.css';
+import cl from './Body.module.css';
 import Carousel from './Carousel';
 
 const Body = () => {
     return (
-        <div className='body-container'>
-            <div className='upper'>
-                <div className='upper__content'>
-                    <div className='card'>
+        <div className={cl.container}>
+            <div className={cl.upper}>
+                <div className={cl.upper__content}>
+                    <div className={cl.card}>
                         <p>Thousands of trivia questions on hundreds of topics.</p>
                         <a>play</a>
                     </div>
                 </div>
             </div>
-            <div className='lower'>
-                <div className='lower__content'>
-                    <div className='carousel'>
+            <div className={cl.lower}>
+                <div className={cl.lower__content}>
+                    <div className={cl.carousel}>
                         <Carousel></Carousel>
                     </div>
                 </div>

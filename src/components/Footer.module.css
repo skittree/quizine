@@ -1,4 +1,4 @@
-.footer-container {
+.container {
     width: 100vw;
     height: 11vh;
     display: flex;
@@ -10,7 +10,7 @@
     row-gap: 1vh;
 }
 
-.footer-container>img {
+.container>img {
     width: 2.7vw;
     border-radius: 50%;
 }
@@ -21,7 +21,7 @@
     background-color: rgba(240, 240, 240, 0.42);
 }
 
-.footer-container>span {
+.container>span {
     width: 174px;
     height: 15px;
     font-family: 'Jost';

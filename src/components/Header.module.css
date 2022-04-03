@@ -8,12 +8,14 @@
 
 .container {
     width: 100vw;
-    height: 7vh;
+    height: 9vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(248.23deg, #633FF2 14.27%, #69078B 85.73%);
     box-shadow: 0px 4px 50px rgba(16, 0, 80, 0.33);
+    position: relative;
+    z-index: 10;
 }
 
 .navbar {
@@ -29,7 +31,7 @@
     text-transform: uppercase;
 }
 
-.navbar > ul {
+.navbar>ul {
     height: 100%;
     list-style-type: none;
     display: flex;
@@ -37,7 +39,7 @@
     align-items: center;
 }
 
-.navbar > ul > li {
+.navbar>ul>li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,18 +50,14 @@
 }
 
 .navbar_logo {
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
     height: 100%;
     font-family: 'Finger Paint';
     font-size: 24px;
     line-height: 35px;
     text-transform: lowercase;
-    padding: 0px 15px 0px 0px;
 }
 
-.navbar > ul > li:hover {
+.navbar>ul>li:hover {
     box-shadow: inset 0 -5px 0 white;
 }
 
@@ -82,4 +80,3 @@
     color: #69078B;
     font-weight: 800;
 }
-

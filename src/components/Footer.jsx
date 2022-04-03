@@ -1,11 +1,11 @@
 import React from 'react';
-import './Footer.css';
+import cl from './Footer.module.css';
 
 const Footer = () => {
     return (
-        <div className='footer-container'>
+        <div className={cl.container}>
             <img src={require("./images/ellipse.png")} alt="" />
-            <div className='break'></div>
+            <div className={cl.break}></div>
             <span>2022 - 2022 quizbox.net</span>
         </div>
     )
