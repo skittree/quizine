@@ -1,0 +1,21 @@
+.myInput {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 0px 0px 10px;
+
+  position: static;
+  width: 880px;
+  height: 35px;
+  background: #ededed;
+
+  border: 2px solid #b663b2;
+  border-radius: 11px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 10px 0px;
+}

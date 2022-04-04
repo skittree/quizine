@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Jost&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100wv;
+    height: 60px;
+    background: linear-gradient(248.23deg, #633FF2 14.27%, #69078B 85.73%);
+    box-shadow: 0px 4px 50px rgba(16, 0, 80, 0.33);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 72vw;
+    font-family: Jost;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.navBarLogo {
+    font-family: 'Finger Paint';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    text-transform: lowercase;
+}
+
+.navBar > li {
+    transition: all 0.3s ease;
+}
+
+.navBar > li:hover {
+    background-color: white;
+    border-radius: 10px;
+    color: #69078B;
+}
+
+.signBtn {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-family: 'Jost';
+    text-transform: uppercase;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signBtn:hover {
+    background-color: white;
+    color: #69078B;
+}

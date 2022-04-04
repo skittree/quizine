@@ -1,0 +1,29 @@
+.sortTab {
+  width: 880px;
+  background: #ffffff;
+  border: 2px solid #b663b2;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin-top: 9px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filterMain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 10px;
+}
