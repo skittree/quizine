@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import cl from "./CategoryItem.module.css";
+import "./CategoryItem.css";
 
 const CategoryItem = (props) => {
   return (
-    <div className={cl.box}>
-      <div className={cl.category}>{props.category.title}</div>
-      <div className={cl.clues}>{props.category.clues_count} Questions</div>
+    <div className="boxC">
+      <div className="categoryC">{props.category.title}</div>
+      <div className="cluesC">{props.category.clues_count} Questions</div>
     </div>
   );
 };

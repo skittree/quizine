@@ -1,13 +1,16 @@
 import React from "react";
-import "./SearchSelect.css";
+import "./SortSelect.css";
 
-const SearchSelect = ({ options, defaultValue, value, onChange }) => {
+const SortSelect = ({ options, defaultValue, value, onChange }) => {
   return (
     <select
-      className="searchSelect"
+      className="sortSelect"
       value={value}
       onChange={(event) => onChange(event.target.value)}
     >
+      <option disabled value="">
+        {defaultValue}
+      </option>
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.name}
@@ -17,4 +20,4 @@ const SearchSelect = ({ options, defaultValue, value, onChange }) => {
   );
 };
 
-export default SearchSelect;
+export default SortSelect;

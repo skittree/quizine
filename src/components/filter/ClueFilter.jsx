@@ -3,8 +3,16 @@ import MyInput from "../UI/input/MyInput";
 import SearchButton from "../UI/button/SearchButton";
 import SortTab from "../UI/sortTab/SortTab";
 import cl from "./ClueFilter.module.css";
+import SortSelect from "../UI/select/SortSelect";
 
 const ClueFilter = ({ filter, setFilter, setModalTab, modalTab }) => {
+  const isSortedByClue = () => {
+    if (filter.sort === "question") {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <div className={cl.body}>
       <MyInput
@@ -22,7 +30,24 @@ const ClueFilter = ({ filter, setFilter, setModalTab, modalTab }) => {
             </SearchButton>
           )}
 
-          <SearchButton>Sort by...</SearchButton>
+          <SortSelect
+            value={filter.sortBy}
+            onChange={(selectedSort) =>
+              setFilter({ ...filter, sortBy: selectedSort })
+            }
+            defaultValue={"Sort By..."}
+            options={
+              isSortedByClue()
+                ? [
+                    { value: "name", name: "Name" },
+                    { value: "date", name: "Date" },
+                  ]
+                : [
+                    { value: "name", name: "Name" },
+                    { value: "clues", name: "Question count" },
+                  ]
+            }
+          ></SortSelect>
         </div>
       </div>
 

@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./components/pages/About";
 import Search from "./components/pages/Search";
+import Category from "./components/pages/Category";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/about" element={<About />}></Route>
         <Route path="/search" element={<Search />}></Route>
+        <Route path="/category" element={<Category id={1542} />}></Route>
       </Routes>
     </BrowserRouter>
   );

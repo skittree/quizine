@@ -18,6 +18,7 @@ function Search() {
     query: "",
     difficulty: 0,
     date: 0,
+    sortBy: "name",
   });
   const [modalTab, setModalTab] = useState(true);
 
@@ -34,7 +35,7 @@ function Search() {
 
   const sortedAndSearchedClues = useClues(
     clues,
-    filter.sort,
+    filter.sortBy,
     filter.query,
     filter.difficulty,
     filter.date
@@ -42,7 +43,7 @@ function Search() {
 
   const sortedAndSearchedCategories = useCategories(
     categories,
-    filter.sort,
+    filter.sortBy,
     filter.query
   );
 
@@ -54,13 +55,8 @@ function Search() {
     fetchCategories();
   }, []);
 
-  // const [modal, setModal] = useState(false);
-
   return (
     <div className="App">
-      {/* <MyModal visible={modal} setVisible={setModal}>
-        <PostFrom create={createPost} />
-      </MyModal> */}
       <Header></Header>
 
       <ClueFilter

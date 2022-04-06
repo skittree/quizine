@@ -1,0 +1,15 @@
+.searchSelect {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 16px;
+  width: 165px;
+  height: 30px;
+  border-radius: 10px;
+  margin-top: 5px;
+
+  background-color: rgba(146, 11, 172, 0.77);
+
+  color: #ffffff;
+}
