@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { login, registration } from '../http/userAPI';
 import cl from './Authorization.module.css';
-import closeIcon from "./images/close-icon.svg";
 
 const Authorization = ({ active, setActive }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const signIn = async () => {
-        const response = await login()
+    const signIn = async (e) => {
+        e.preventDefault();
+        const response = await login(email, password);
+        console.log(response);
     }
 
     const signUp = async (e) => {
@@ -25,7 +26,7 @@ const Authorization = ({ active, setActive }) => {
                     <form className={cl.formContent} action="">
                         <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" placeholder='Enter your username here' />
                         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Enter your password here' />
-                        <button type='submit' onClick={signIn}>sign in</button>
+                        <button onClick={signIn}>sign in</button>
                     </form>
                 </div>
                 <div className={cl.break}></div>

@@ -4,11 +4,14 @@ import Footer from './Footer'
 import Header from './Header'
 
 const MainPage = () => {
+  console.log(process.env.REACT_APP_API_URL);
+
   return (
+
     <div>
-        <Header/>
-        <Body/>
-        <Footer/>
+      <Header />
+      <Body />
+      <Footer />
     </div>
   )
 }
