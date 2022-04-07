@@ -12,11 +12,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route path="/" element={<MainPage />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/search" element={<Search />}></Route>
         <Route path="/game" element={<Game />}></Route>
         <Route path="/category" element={<Category id={1542} />}></Route>
-        <Route path="/main" element={<MainPage />}></Route>
         <Route path="/rating" element={<RatingPage />}></Route>
       </Routes>
     </BrowserRouter>
