@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "../../App.css";
 import Header from "../Header";
 import CategoryCardService from "../API/CategoryCardService";
@@ -7,8 +7,13 @@ import CategoryCard from "../CategoryCard";
 import Loader from "./../UI/Loader/Loader";
 import "./Category.css";
 import Footer from "./../Footer";
+import { CategoryContext } from "../../context";
 
 function Category({ id }) {
+  const { categoryId, setCategoryId } = useContext(CategoryContext);
+
+  id = categoryId;
+
   const [category, setCategory] = useState({});
 
   const [fetchCategory, isCategoryLoading, categoryError] =
