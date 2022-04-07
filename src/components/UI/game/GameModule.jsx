@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import GameQuestion from "./GameQuestion";
 import ProgressDot from "../progressDot/ProgressDot";
+import {Link} from 'react-router-dom';
 
 const GameModule = ({ clues }) => {
   const [activeClue, setActiveClue] = useState(-1);
@@ -144,7 +145,7 @@ const GameModule = ({ clues }) => {
                       id="return-button"
                       onClick={console.log()}
                     >
-                      Main Page
+                      <Link className="toMain" to='/' >Main Page</Link> 
                     </button>
                   </div>
                 </div>
