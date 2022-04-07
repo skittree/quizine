@@ -137,6 +137,7 @@
     border-radius: 12px;
     background: var(--cornflower);
     color: white;
+    transition: color 0.2s;
 }
 
 .submit:hover {
@@ -156,6 +157,7 @@
     border-radius: 12px;
     background: var(--red);
     color: white;
+    transition: color 0.2s;
 }
 
 .skip:hover {
