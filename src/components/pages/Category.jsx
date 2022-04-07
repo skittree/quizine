@@ -5,14 +5,17 @@ import CategoryCardService from "../API/CategoryCardService";
 import { useFetchingCategoryCard } from "./../hooks/useFetchingCategoryCard";
 import CategoryCard from "../CategoryCard";
 import Loader from "./../UI/Loader/Loader";
+import "./Category.css";
 
 function Category({ id }) {
+  id = 1542;
   const [category, setCategory] = useState({});
 
   const [fetchCategory, isCategoryLoading, categoryError] =
     useFetchingCategoryCard(async () => {
       const category = await CategoryCardService.getAll(id);
       setCategory(category);
+      console.log(category);
     });
 
   useEffect(() => {
@@ -20,9 +23,15 @@ function Category({ id }) {
   }, []);
 
   return (
-    <div className="App">
+    <div className="category">
       <Header></Header>
-      {isCategoryLoading ? <Loader /> : <CategoryCard category={category} />}
+      {isCategoryLoading ? (
+        <Loader />
+      ) : (
+        <div className="category_content">
+          <CategoryCard category={category} />
+        </div>
+      )}
     </div>
   );
 }

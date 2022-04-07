@@ -1,33 +1,19 @@
 import React from "react";
-import "CategoryTable.css";
+import "./CategoryTable.css";
+import TableRow from "./UI/table/TableRow";
 
-const CategoryTable = () => {
-  const difficultyOptions = [
-    [100, 200, 300],
-    [400, 500, 600],
-    [700, 800, 900, 1000],
-  ];
-
-  const setDifficulty = (value) => {
-    if (difficultyOptions[0].includes(value)) {
-      return "easy";
-    }
-    if (difficultyOptions[1].includes(value)) {
-      return "medium";
-    }
-    if (difficultyOptions[2].includes(value)) {
-      return "hard";
-    }
-    return "undefined";
-  };
-
+const CategoryTable = ({ clues }) => {
   return (
-    <table>
+    <table className="table">
       <tr>
         <th>Question</th>
         <th>Answer</th>
         <th>Difficulty</th>
       </tr>
+
+      {clues.map((clue) => (
+        <TableRow key={clue.id} clue={clue}></TableRow>
+      ))}
     </table>
   );
 };
