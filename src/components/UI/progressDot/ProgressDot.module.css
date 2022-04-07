@@ -1,0 +1,34 @@
+:root {
+  --red: #a14426;
+  --green: #a1d282;
+  --black: #1b1b36;
+  --gray: #f3e8f6;
+}
+
+.progDotInactive {
+  width: 32px;
+  height: 32px;
+  border-radius: 40px;
+  background-color: var(--gray);
+}
+
+.progDotActive {
+  width: 32px;
+  height: 32px;
+  border-radius: 40px;
+  background-color: var(--black);
+}
+
+.progDotWrong {
+  width: 32px;
+  height: 32px;
+  border-radius: 40px;
+  background-color: var(--red);
+}
+
+.progDotCorrect {
+  width: 32px;
+  height: 32px;
+  border-radius: 40px;
+  background-color: var(--green);
+}

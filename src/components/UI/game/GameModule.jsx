@@ -3,12 +3,20 @@ import "../../pages/Game.css";
 import { useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import GameQuestion from "./GameQuestion";
+import ProgressDot from "../progressDot/ProgressDot";
 
 const GameModule = ({ clues }) => {
   const [activeClue, setActiveClue] = useState(-1);
   const [gameStarted, setGameStarted] = useState(false);
   const [answerLog, setAnswerLog] = useState(new Array(10).fill(0));
   const [inputQuery, setInputQuery] = useState("");
+  const [gameFinish, setGameFinish] = useState(false);
+  const [answersCount, setAnswersCount] = useState({ correct: 0, wrong: 0 });
+
+  if (activeClue === 10) {
+    setGameFinish(true);
+    setActiveClue(-1);
+  }
 
   const handleGameStart = () => {
     setGameStarted(true);
@@ -28,27 +36,28 @@ const GameModule = ({ clues }) => {
     handleLogChange(3);
     setInputQuery("");
     setActiveClue(activeClue + 1);
+    setAnswersCount({ ...answersCount, wrong: +1 });
   };
 
   const handleSubmit = () => {
-    console.log([
-      clues[activeClue].answer.toLowerCase().includes(inputQuery.toLowerCase()),
-    ]);
     if (
-      clues[activeClue].answer.toLowerCase().includes(inputQuery.toLowerCase())
+      clues[activeClue].answer
+        .toLowerCase()
+        .includes(inputQuery.toLowerCase()) &&
+      !inputQuery.length == 0
     ) {
       handleLogChange(2);
       setInputQuery("");
       setActiveClue(activeClue + 1);
+      setAnswersCount({ ...answersCount, correct: +1 });
       return;
     }
     handleLogChange(3);
     setInputQuery("");
     setActiveClue(activeClue + 1);
+    setAnswersCount({ ...answersCount, wrong: +1 });
     return;
   };
-  console.log(clues);
-  console.log(answerLog);
 
   const verifyActive = (questionIndex) => {
     return activeClue == questionIndex;
@@ -65,62 +74,65 @@ const GameModule = ({ clues }) => {
           Start Game
         </button>
       ) : (
-        <div className="game-container">
-          <div>
-            {clues.map((clue, index) => (
-              <GameQuestion
-                key={clue.id}
-                questionNumber={index + 1}
-                clue={clue}
-                isActive={verifyActive(index)}
-              ></GameQuestion>
-            ))}
-          </div>
+        <div>
+          {!gameFinish ? (
+            <div className="game-container">
+              <div>
+                {clues.map((clue, index) => (
+                  <GameQuestion
+                    key={clue.id}
+                    questionNumber={index + 1}
+                    clue={clue}
+                    isActive={verifyActive(index)}
+                  ></GameQuestion>
+                ))}
+              </div>
 
-          <div className="answer-container">
-            <div className="input-container">
-              <input
-                className="answer-bar"
-                id="text"
-                placeholder="Type answer..."
-                value={inputQuery}
-                onChange={(e) => setInputQuery(e.target.value)}
-              ></input>
-              <div className="input-buttons">
-                <button
-                  className="submit"
-                  id="input-button"
-                  onClick={() => handleSubmit()}
-                >
-                  SUBMIT
-                </button>
-                <button
-                  className="skip"
-                  id="input-button"
-                  onClick={() => handleSkip()}
-                >
-                  SKIP
-                </button>
+              <div className="answer-container">
+                <div className="input-container">
+                  <input
+                    className="answer-bar"
+                    id="text"
+                    placeholder="Type answer..."
+                    value={inputQuery}
+                    onChange={(e) => setInputQuery(e.target.value)}
+                  ></input>
+                  <div className="input-buttons">
+                    <button
+                      className="submit"
+                      id="input-button"
+                      onClick={() => handleSubmit()}
+                    >
+                      SUBMIT
+                    </button>
+                    <button
+                      className="skip"
+                      id="input-button"
+                      onClick={() => handleSkip()}
+                    >
+                      SKIP
+                    </button>
+                  </div>
+                </div>
+                <div className="progress-bar-container">
+                  <div className="progress-bar">
+                    {answerLog.map((value, index) => (
+                      <ProgressDot key={index + 1} value={value} />
+                    ))}
+                  </div>
+                  <div className="question-count">
+                    <a id="text">{activeClue + 1}/10</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="progress-bar-container">
-              <div className="progress-bar">
-                <div className="progress-dot"></div>
-                <div className="progress-dot"></div>
-                <div className="progress-dot"></div>
-                <div className="progress-dot"></div>
-                <div className="progress-dot"></div>
-                <div className="progress-dot"></div>
-                <div className="progress-dot"></div>
-                <div className="progress-dot"></div>
-                <div className="progress-dot"></div>
-                <div className="progress-dot"></div>
-              </div>
-              <div className="question-count">
-                <a id="text">{activeClue + 1}/10</a>
+          ) : (
+            <div>
+              <div className="answer-container">
+                <h1 className="game-header">Quiz complete!</h1>
               </div>
             </div>
-          </div>
+          )}
         </div>
       )}
     </div>
