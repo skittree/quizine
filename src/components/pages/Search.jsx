@@ -21,7 +21,7 @@ function Search() {
     date: 0,
     sortBy: "name",
   });
-  const [modalTab, setModalTab] = useState(true);
+  const [modalTab, setModalTab] = useState(false);
 
   const [fetchClues, isClueLoading, clueError] = useFetchingClues(async () => {
     const clues = await ClueService.getAll();
