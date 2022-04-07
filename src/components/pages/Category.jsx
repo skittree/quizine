@@ -6,9 +6,9 @@ import { useFetchingCategoryCard } from "./../hooks/useFetchingCategoryCard";
 import CategoryCard from "../CategoryCard";
 import Loader from "./../UI/Loader/Loader";
 import "./Category.css";
+import Footer from "./../Footer";
 
 function Category({ id }) {
-  id = 1542;
   const [category, setCategory] = useState({});
 
   const [fetchCategory, isCategoryLoading, categoryError] =
@@ -32,6 +32,7 @@ function Category({ id }) {
           <CategoryCard category={category} />
         </div>
       )}
+      <Footer />
     </div>
   );
 }
