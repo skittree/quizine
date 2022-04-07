@@ -1,7 +1,7 @@
 import React from 'react'
-import { selectAll } from '../http/userAPI'
-import Footer from './Footer'
-import Header from './Header'
+import { selectAll } from '../../http/userAPI'
+import Footer from '../Footer'
+import Header from '../Header'
 import cl from './RatingPage.module.css'
 
 const Rating = () => {

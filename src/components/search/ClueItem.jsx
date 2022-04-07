@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./ClueItem.css";
 import { CSSTransition } from "react-transition-group";
+import { Link } from "react-router-dom";
+import { CategoryContext } from "../../context";
 
 const ClueItem = (props) => {
+  const {categoryId, setCategoryId} = useContext(CategoryContext);
+
   const [showAnswer, setShowAnswer] = useState(false);
 
   const [showContent, setShowContent] = useState(false);
@@ -61,7 +65,7 @@ const ClueItem = (props) => {
         <div className="content">
           <div className="contentItem">
             <h3>Category:</h3>
-            <a href={"#"}>{props.clue.category.title}</a>
+            <Link to='/category' onClick={() => setCategoryId(props.clue.category.id) }>{props.clue.category.title}</Link>
           </div>
           <div className="contentItem">
             <h3>Difficulty:</h3>
