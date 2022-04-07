@@ -8,6 +8,16 @@
   --gray: #f3e8f6;
 }
 
+.toMain {
+  text-decoration: none;
+  color: white;
+  transition: 200ms;
+}
+
+.toMain {
+  color: var(--cornflower-solid);
+}
+
 .GameApp {
   background-color: white;
   width: 100%;
@@ -98,6 +108,7 @@
   font-size: 36px;
   line-height: 46px;
   margin-top: 20px;
+  transition: 0.2s;
 }
 
 .answer-bar {
