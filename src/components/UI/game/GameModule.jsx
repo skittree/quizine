@@ -11,7 +11,8 @@ const GameModule = ({ clues }) => {
   const [answerLog, setAnswerLog] = useState(new Array(10).fill(0));
   const [inputQuery, setInputQuery] = useState("");
   const [gameFinish, setGameFinish] = useState(false);
-  const [answersCount, setAnswersCount] = useState({ correct: 0, wrong: 0 });
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [wrongAnswers, setWrongAnswers] = useState(0);
 
   if (activeClue === 10) {
     setGameFinish(true);
@@ -36,7 +37,7 @@ const GameModule = ({ clues }) => {
     handleLogChange(3);
     setInputQuery("");
     setActiveClue(activeClue + 1);
-    setAnswersCount({ ...answersCount, wrong: +1 });
+    setWrongAnswers(wrongAnswers + 1);
   };
 
   const handleSubmit = () => {
@@ -49,13 +50,13 @@ const GameModule = ({ clues }) => {
       handleLogChange(2);
       setInputQuery("");
       setActiveClue(activeClue + 1);
-      setAnswersCount({ ...answersCount, correct: +1 });
+      setCorrectAnswers(correctAnswers + 1);
       return;
     }
     handleLogChange(3);
     setInputQuery("");
     setActiveClue(activeClue + 1);
-    setAnswersCount({ ...answersCount, wrong: +1 });
+    setWrongAnswers(wrongAnswers + 1);
     return;
   };
 
@@ -129,7 +130,24 @@ const GameModule = ({ clues }) => {
           ) : (
             <div>
               <div className="answer-container">
-                <h1 className="game-header">Quiz complete!</h1>
+                <div className="gameFinishInfo">
+                  <h1 className="finishHeader">Quiz complete!</h1>
+                  <div>
+                    <h3 className="gameFinishText" style={{ color: "green" }}>
+                      Correct answers: {correctAnswers}
+                    </h3>
+                    <h3 className="gameFinishText" style={{ color: "red" }}>
+                      Incorrect Answers:{wrongAnswers}
+                    </h3>
+                    <button
+                      className="submit"
+                      id="return-button"
+                      onClick={console.log()}
+                    >
+                      Main Page
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           )}
