@@ -1,0 +1,22 @@
+.body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 6.5px;
+}
+
+.btns {
+  width: 880px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 6px;
+  margin: 0;
+}

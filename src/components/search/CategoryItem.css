@@ -1,0 +1,42 @@
+.boxC {
+  background: #ffffff;
+  min-height: 85px;
+  max-width: 472;
+  border: 2px solid #b663b2;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  transition: 500ms;
+}
+
+.boxC:hover {
+  transform: scale(1.05);
+  transition: 500ms;
+}
+
+.categoryC {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 0;
+
+  color: #000000;
+}
+
+.cluesC {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  padding: 0;
+  text-transform: capitalize;
+
+  color: #000000;
+}

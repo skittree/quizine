@@ -1,0 +1,85 @@
+.bodyC {
+  background: #ffffff;
+  min-height: 85px;
+  width: 1080px;
+  border: 2px solid #b663b2;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 15px 15px 10px 15px;
+  margin: 40px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: 500ms;
+}
+
+.box_table {
+  background: #ffffff;
+  min-height: 85px;
+  max-width: 472;
+  border: 2px solid #b663b2;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 15px 15px 10px 15px;
+  margin: 15px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.showButton {
+  height: 40px;
+  width: 100%;
+  font-size: 18px;
+  border: none;
+  background: #f3f3f3;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 10px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 19px;
+
+  color: #000000;
+  transition: 200ms;
+}
+
+.showButton:hover {
+  transition: 200ms;
+  background: #e0e0e0;
+}
+
+.contentC {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contentC div {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 19px;
+  padding: 0;
+
+  color: #000000;
+}
+
+.contentC h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 19px;
+  padding: 0;
+
+  color: #000000;
+}

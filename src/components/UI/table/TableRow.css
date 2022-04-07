@@ -1,0 +1,9 @@
+.answer_column {
+  transition: 300ms;
+}
+
+.answer_column:hover {
+  background: #f3f3f3;
+  transition: 300ms;
+  cursor: pointer;
+}

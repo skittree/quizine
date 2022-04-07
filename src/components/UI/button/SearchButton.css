@@ -1,0 +1,27 @@
+.MyBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 187px;
+  height: 33px;
+  color: #424242;
+  font-size: 14px;
+  background: #ffffff;
+  border: 2px solid #b663b2;
+  box-sizing: border-box;
+  border-radius: 11px;
+  cursor: pointer;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+}
+
+.MyBtn:hover {
+  color: #ffffff;
+  background-color: #c73fca;
+  transition: 0.2s;
+}

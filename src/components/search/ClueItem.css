@@ -1,0 +1,133 @@
+.box {
+  background: #ffffff;
+  min-height: 85px;
+  max-width: 472;
+  border: 2px solid #b663b2;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 15px 15px 10px 15px;
+  margin: 15px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 500ms;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  transition: 500ms;
+}
+
+.question {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 19px;
+  padding: 0;
+
+  color: #000000;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.showButton {
+  height: 28px;
+  width: fit-content;
+  font-size: 18px;
+  border: none;
+  background: #f3f3f3;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 19px;
+
+  color: #000000;
+  transition: 200ms;
+}
+
+.showButton:hover {
+  transition: 200ms;
+  background: #e0e0e0;
+}
+
+.hideButton {
+  height: 28px;
+  font-size: 18px;
+  border: none;
+  background: #f3f3f3;
+  border-radius: 10px;
+  margin-top: -10px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 19px;
+  padding: 0;
+
+  color: #000000;
+  transition: 300ms;
+}
+.hideButton:hover {
+  transition: 300ms;
+  background: #e0e0e0;
+}
+
+.content {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contentItem {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contentItem div {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 19px;
+  padding: 0;
+
+  color: #000000;
+}
+
+.contentItem h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 19px;
+  padding: 0;
+
+  color: #000000;
+}
+.contentItem a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 19px;
+  padding: 0;
+
+  color: #c635b7;
+}

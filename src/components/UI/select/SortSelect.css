@@ -1,0 +1,17 @@
+.sortSelect {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+  line-height: 16px;
+  text-align: center;
+
+  width: 187px;
+  height: 33px;
+
+  background: #ffffff;
+  border: 2px solid rgba(103, 25, 104, 0.83);
+  box-sizing: border-box;
+  border-radius: 11px;
+}
