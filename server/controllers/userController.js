@@ -3,8 +3,8 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const { User, Rating } = require('../models')
 
-const generateJwt = (id, email ) => {
-    return jwt.sign({id, email }, 'secret_key', { expiresIn: '24h' })
+const generateJwt = (id, email) => {
+    return jwt.sign({ id, email }, 'secret_key', { expiresIn: '24h' })
 }
 
 class UserController {
@@ -24,8 +24,8 @@ class UserController {
     }
 
     async login(req, res, next) {
-        const {email, password} = req.body;
-        const user = await User.findOne({where: {email}});
+        const { email, password } = req.body;
+        const user = await User.findOne({ where: { email } });
         if (!user) {
             return next(ApiError.internal("Incorrect credentials"))
         }
@@ -34,7 +34,17 @@ class UserController {
             return next(ApiError.internal("Incorrect password"))
         }
         const token = generateJwt(user.id, user.email);
-        return res.json({token});
+        return res.json({ token });
+    }
+
+    async selectAll(req, res, next) {
+        const users = await User.findAll({ 
+            attributes: ['email'], 
+            include: [{
+                model: Rating,
+                required: true
+            }]});
+        return res.json(JSON.stringify(users, null, 2))
     }
 
     async check(req, res, next) {

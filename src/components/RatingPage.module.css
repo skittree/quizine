@@ -1,0 +1,50 @@
+.body {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 72%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.content > span {
+    width: 100%;
+    text-align: left;
+    font-family: 'Jost';
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.ratingTable {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 14px;
+}
+
+.ratingRow {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box; 
+    border-radius: 20px;
+    padding: 0px 20px;
+    font-family: 'Jost';
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    background: linear-gradient(248.23deg, #633FF2 14.27%, #69078B 85.73%);;
+}
