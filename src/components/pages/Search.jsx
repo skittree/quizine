@@ -9,6 +9,7 @@ import { useFetchingClues } from "./../hooks/useFetchingClues";
 import ClueService from "./../API/ClueService";
 import CategoryService from "./../API/CategoryService";
 import SearchResult from "./../SearchResult";
+import Footer from "./../Footer";
 
 function Search() {
   const [clues, setClues] = useState([]);
@@ -72,6 +73,7 @@ function Search() {
         isCategoryLoading={isCategoryLoading}
         isClueLoading={isClueLoading}
       />
+      <Footer />
     </div>
   );
 }
