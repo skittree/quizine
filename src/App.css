@@ -17,6 +17,7 @@ html {
 
 #root {
   display: flex;
+  min-height: 900px;
   justify-content: center;
   background-color: var(--base);
   --base: #400654;

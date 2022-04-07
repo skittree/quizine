@@ -104,7 +104,18 @@ const GameModule = ({ clues }) => {
               </div>
             </div>
             <div className="progress-bar-container">
-              <div className="progress-bar"></div>
+              <div className="progress-bar">
+                <div className="progress-dot"></div>
+                <div className="progress-dot"></div>
+                <div className="progress-dot"></div>
+                <div className="progress-dot"></div>
+                <div className="progress-dot"></div>
+                <div className="progress-dot"></div>
+                <div className="progress-dot"></div>
+                <div className="progress-dot"></div>
+                <div className="progress-dot"></div>
+                <div className="progress-dot"></div>
+              </div>
               <div className="question-count">
                 <a id="text">{activeClue + 1}/10</a>
               </div>

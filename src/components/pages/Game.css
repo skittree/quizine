@@ -1,6 +1,9 @@
 :root {
     --cornflower: linear-gradient(248.23deg, #633FF2 14.27%, #69078B 85.73%);
     --red: #A14426;
+    --green: #A1D282;
+    --black: #1B1B36;
+    --gray: #F3E8F6;
 }
 
 .GameApp {
@@ -9,7 +12,29 @@
   }
 
 .game-wrapper {
+    display: flex;
+    min-height: 700px;
     margin: 70px 100px;
+}
+
+.game-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game-container > div {
+    width: 100%;
+}
+
+.answer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
 }
 
 #h1 {
@@ -95,6 +120,7 @@
 }
 
 .input-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,8 +142,31 @@
 }
 
 .progress-bar-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+
+.answer-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 40px;
+    background-color: var(--red);
 }
