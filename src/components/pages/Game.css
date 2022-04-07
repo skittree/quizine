@@ -1,0 +1,111 @@
+:root {
+    --cornflower: linear-gradient(248.23deg, #633FF2 14.27%, #69078B 85.73%);
+    --red: #A14426;
+}
+
+.GameApp {
+    background-color: white;
+    width: 100%;
+  }
+
+.game-wrapper {
+    margin: 70px 100px;
+}
+
+#h1 {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 72px;
+    color: #1B1B36;
+}
+
+#h2 {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    color: #633FF2;
+}
+
+#text {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    color: #1B1B36;
+}
+
+#input-button {
+    width: 220px;
+    height: 73px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 46px;
+    color: white;
+}
+
+.answer-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 0px 0px 30px;
+    background: #F3E8F6;
+    border: 4px solid #69078B;
+    border-radius: 40px;
+    width: 100%;
+    height: 76px;
+}
+
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.question-text {
+    margin: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.input-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.submit {
+    background: var(--cornflower);
+}
+
+.skip {
+    background: var(--red);
+}
+
+.progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
