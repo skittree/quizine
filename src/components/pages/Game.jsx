@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "../Header.module/Header";
+import Header from "../Header";
 import "./Game.css";
 
 function Game() {

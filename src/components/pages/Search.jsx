@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../App.css";
-import Header from "../Header.module/Header";
+import Header from "../Header";
 import { useCategories } from "../hooks/useCategories";
 import ClueFilter from "../filter/ClueFilter";
 import { useClues } from "../hooks/useClues";

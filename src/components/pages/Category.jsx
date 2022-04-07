@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../App.css";
-import Header from "../Header.module/Header";
+import Header from "../Header";
 import CategoryCardService from "../API/CategoryCardService";
 import { useFetchingCategoryCard } from "./../hooks/useFetchingCategoryCard";
 import CategoryCard from "../CategoryCard";
